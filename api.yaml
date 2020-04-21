@@ -1,0 +1,37 @@
+info:
+  description: This is a simple API
+  title: abc
+  version: abc
+
+components:
+  schemas:
+    Subject:
+      properties:
+        id:
+          type: int
+        title:
+          type: string
+        description:
+          type: string
+        exercises:
+          type: List<Exercise>
+    Exercise:
+      parent: Subject
+      properties:
+        id:
+          type: int
+        content:
+          type: string
+        solution:
+          type: string
+        answers:
+          type: List<Answer>
+    Answer:
+      parent: Exercise
+      properties:
+        id:
+          type: int
+        content:
+          type: string
+        correct:
+          type: bool
